@@ -29,10 +29,6 @@ public class AlimentoService {
         Double caloriaEmProteina = consumoCalorico * 0.3;
         Double caloriaEmLipidios = consumoCalorico * 0.2;
 
-        String consumoEmCarboidrato = null;
-        String consumoEmProteina = null;
-        String consumoEmLipidios = null;
-
         Map<String,Integer> carboidratos = new TreeMap<>();
         Map<String,Integer> lipideos = new TreeMap<>();
         Map<String,Integer> proteinas = new TreeMap<>();
