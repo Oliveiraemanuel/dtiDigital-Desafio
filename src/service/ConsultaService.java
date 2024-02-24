@@ -28,25 +28,32 @@ public class ConsultaService {
 
 
     public static Consulta cadastrarConsulta(Scanner in) {
+
         in.useLocale(Locale.US);
+
         System.out.println("Selecione o cliente:");
         listarTodosOsClientes();
+
         Integer indiceCliente = in.nextInt() - 1;
-        in.nextLine(); // Consumir a quebra de linha pendente
+        in.nextLine();
+
         System.out.print("Digite a data da consulta (dd/MM/yyyy): ");
         String data = in.nextLine();
+
         System.out.print("Digite o horário da consulta (HH:mm): ");
         String horario = in.nextLine();
+
         System.out.print("Digite o peso do paciente: ");
-        Double peso = in.nextDouble();// Consumir a quebra de linha pendente
+        Double peso = in.nextDouble();
 
         System.out.print("Digite a % de gordura corporal do paciente: ");
         Double gorduraCorporal = in.nextDouble();
-        in.nextLine(); // Consumir a quebra de linha pendente
+        in.nextLine();
 
         System.out.print("Digite a sensação física do paciente: ");
         String sensacaoFisica = in.nextLine();
         in.nextLine();
+
         Boolean maisRestricao = false;
 
         List<String> restricoes = new ArrayList<>();

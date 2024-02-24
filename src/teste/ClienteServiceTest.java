@@ -18,7 +18,7 @@ public class ClienteServiceTest {
 
     @Test
     public void testCadastrarConsulta() {
-        // Simulando entrada do usuário
+
         String input = "1\n22/02/2024\n10:00\n7.50\n20.0\nBem\nsim\nN\nN\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
@@ -26,10 +26,8 @@ public class ClienteServiceTest {
 
         System.out.println("Entrada fornecida: " + input);
 
-        // Método de teste
         consulta = cadastrarConsulta(scanner);
 
-        // Verifica se a consulta foi adicionada corretamente
         assertEquals("22/02/2024", consulta.getData());
         assertEquals("10:00", consulta.getHorario());
         assertEquals(7.50, consulta.getPeso());
