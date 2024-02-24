@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import static service.ClienteService.clientes;
 import static service.ClienteService.listarTodosOsClientes;
 
 public class ConsultaService {
