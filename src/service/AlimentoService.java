@@ -46,21 +46,21 @@ public class AlimentoService {
 
         for (int i = 0; i< alimentos.size(); i++){
             if (alimentos.get(i).getGrupoAlimento().equals(GrupoAlimento.CARBOIDRATO)){
-                Integer x = (int) (caloriaEmCarboidrato / alimentos.get(i).getCalorias()); //6
-                carboidratos.put(alimentos.get(i).getNomeAlimento(), x * 100);
+                Integer qtdPorcoes = (int) (caloriaEmCarboidrato / alimentos.get(i).getCalorias()); //6
+                carboidratos.put(alimentos.get(i).getNomeAlimento(), qtdPorcoes * 100);
                 carboidratosOrdenados = ordenarPorValor(carboidratos);
 
             }
 
             if (alimentos.get(i).getGrupoAlimento().equals(GrupoAlimento.PROTEINA)){
-                Integer x = (int) (caloriaEmProteina / alimentos.get(i).getCalorias()); //6
-                proteinas.put(alimentos.get(i).getNomeAlimento(), x * 100);
+                Integer qtdPorcoes = (int) (caloriaEmProteina / alimentos.get(i).getCalorias()); //6
+                proteinas.put(alimentos.get(i).getNomeAlimento(), qtdPorcoes * 100);
                 proteinasOrdenados = ordenarPorValor(proteinas);
             }
 
             if (alimentos.get(i).getGrupoAlimento().equals(GrupoAlimento.LIPIDIOS)){
-                Integer x = (int) (caloriaEmLipidios / alimentos.get(i).getCalorias()); //6
-                lipideos.put(alimentos.get(i).getNomeAlimento(), x * 100);
+                Integer qtdPorcoes = (int) (caloriaEmLipidios / alimentos.get(i).getCalorias()); //6
+                lipideos.put(alimentos.get(i).getNomeAlimento(), qtdPorcoes * 100);
                 lipideosOrdenados = ordenarPorValor(lipideos);
             }
         }
